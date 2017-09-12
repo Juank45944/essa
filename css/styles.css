@@ -1,0 +1,82 @@
+.azul-text{
+    color: #264796 !important;
+}
+.azulclaro-text{
+    color: #005FAA !important;
+}
+.gris-text{
+    color: #727271 !important;
+}
+.azul{
+    background-color: #264796 !important;
+}
+.azulclaro{
+    background-color: #0060AA !important;
+}
+.gris{
+    background-color: #727271 !important;
+}
+
+
+ /* label color */
+ .input-field label {
+    color: #727271;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #727271;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #727271;
+    box-shadow: 0 1px 0 0 #727271;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #727271;
+    box-shadow: 0 1px 0 0 #727271;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #727271;
+    box-shadow: 0 1px 0 0 #727271;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #727271;
+  }
+
+  input:focus:not([type]):not([readonly]), input[type="text"]:focus:not(.browser-default):not([readonly]), input[type="password"]:focus:not(.browser-default):not([readonly]), input[type="email"]:focus:not(.browser-default):not([readonly]), input[type="url"]:focus:not(.browser-default):not([readonly]), input[type="time"]:focus:not(.browser-default):not([readonly]), input[type="date"]:focus:not(.browser-default):not([readonly]), input[type="datetime"]:focus:not(.browser-default):not([readonly]), input[type="datetime-local"]:focus:not(.browser-default):not([readonly]), input[type="tel"]:focus:not(.browser-default):not([readonly]), input[type="number"]:focus:not(.browser-default):not([readonly]), input[type="search"]:focus:not(.browser-default):not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid #264796;
+    -webkit-box-shadow: 0 1px 0 0 #264796;
+    box-shadow: 0 1px 0 0 #264796;
+  }
+  input:focus:not([type]):not([readonly]) + label, input[type="text"]:focus:not(.browser-default):not([readonly]) + label, input[type="password"]:focus:not(.browser-default):not([readonly]) + label, input[type="email"]:focus:not(.browser-default):not([readonly]) + label, input[type="url"]:focus:not(.browser-default):not([readonly]) + label, input[type="time"]:focus:not(.browser-default):not([readonly]) + label, input[type="date"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime-local"]:focus:not(.browser-default):not([readonly]) + label, input[type="tel"]:focus:not(.browser-default):not([readonly]) + label, input[type="number"]:focus:not(.browser-default):not([readonly]) + label, input[type="search"]:focus:not(.browser-default):not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label{
+      color: #264796;
+  }
+
+  body{
+      background-image: url('../img/lightbulb.jpg');
+      background-size: cover;
+  }
+
+  .main-container{
+      margin-bottom: 0;
+      height: 47.3em;
+      background-color: rgba(38, 71, 150, 0.7);
+  }
+
+  img.logo{
+      width: 20%;
+  }
+  .card-action{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  div.card.white{
+      margin-top: 40%;
+  }
+a.olvidaste{
+    font-size: 0.8em;
+}
