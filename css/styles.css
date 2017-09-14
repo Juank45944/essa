@@ -63,7 +63,6 @@
   .main-container{
       margin-bottom: 0;
       height: 47.3em;
-      background-color: rgba(38, 71, 150, 0.7);
   }
 
   img.logo{
@@ -77,6 +76,19 @@
   div.card.white{
       margin-top: 40%;
   }
-a.olvidaste{
+#login a.olvidaste{
+    font-size: 0.8em;
+    cursor: pointer;
+}
+.btn-flat{
+    padding: 0;
+    margin-left: 1em;
+}
+
+#registro, #recuperar{
+    display: none;
+}
+
+#detalle_recuperar{
     font-size: 0.8em;
 }

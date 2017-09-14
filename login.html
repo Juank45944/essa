@@ -15,35 +15,118 @@
 
     <div class="main-container">
 
-        <div class="row">
+        <!-- LOGIN -->
+        <div class="row" id="login">
             <div class="col s12 l4 offset-l2">
                 <div class="card white">
                 <div class="card-content">
                     <span class="card-title azul-text">Inicia Sesión</span>
                     <div class="row">
-                        <form class="col s12">
-                            <div class="input-field">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Correo electrónico</label>
-                            </div>
-                            <div class="input-field">
-                                    <input id="password" type="password" class="validate">
-                                    <label for="email">Contraseña</label>
-                            </div>
-                            <a class="olvidaste" href="">¿Olvidaste la contraseña?</a>
-                        </form>
+                        <div class="col s12">
+                            <form id="login_form">
+                                <div class="input-field">
+                                    <input id="email" type="email" class="validate" aria-required="true">
+                                    <label for="email" data-error="Debes ingresar un correo electrónico válido">
+                                        Correo electrónico
+                                    </label>
+                                </div>
+                                <div class="input-field">
+                                        <input id="password" type="password" class="validate" aria-required="true">
+                                        <label for="password" data-error="Ingresa tu contraseña">Contraseña</label>
+                                </div>
+                                <a id="recuperar_btn" class="olvidaste">¿Olvidaste la contraseña?</a>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="card-action">
                     <img class="responsive-img logo" src="img/LogoEssa.png" alt="Essa">
                     <div>
-                        <a href="#" class="gris-text">Regístrate</a>
-                        <a href="#" class="azulclaro-text">Ingresar</a>
+                        <button id="registrate_btn" class="btn-flat gris-text">Regístrate</button>
+                        <button id="ingresar_btn" class="btn-flat azulclaro-text" type="submit">Ingresar</button>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- REGISTRO -->
+        <div class="row" id="registro">
+                        <div class="col s12 l4 offset-l2">
+                            <div class="card white">
+                            <div class="card-content">
+                                <span class="card-title azul-text">Regístrate</span>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <form id="registro_form">
+                                            <div class="input-field">
+                                                <input id="nombre" type="text" class="validate" aria-required="true">
+                                                <label for="nombre" data-error="Debes ingresar tu nombre completo">
+                                                    Nombre completo
+                                                </label>
+                                            </div>
+                                            <div class="input-field">
+                                                <input id="email" type="email" class="validate" aria-required="true">
+                                                <label for="email" data-error="Debes ingresar un correo electrónico válido">
+                                                    Correo electrónico
+                                                </label>
+                                            </div>
+                                            <div class="input-field">
+                                                    <input id="password" type="password" class="validate" aria-required="true">
+                                                    <label for="password" data-error="Ingresa tu contraseña">Crea una contraseña</label>
+                                            </div>
+                                            <div class="input-field">
+                                                    <input id="password_repeat" type="password" class="validate" aria-required="true">
+                                                    <label for="password_repeat" data-error="Repite la contraseña">Ingresa nuevamente tu contraseña</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <img class="responsive-img logo" src="img/LogoEssa.png" alt="Essa">
+                                <div>
+                                    <button id="atras_btn" class="btn-flat gris-text">Atrás</button>
+                                    <button id="enviar_btn" class="btn-flat azulclaro-text" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+            </div>
+
+            <!-- RECUPERAR CONTRASEÑA -->
+            <div class="row" id="recuperar">
+                <div class="col s12 l4 offset-l2">
+                    <div class="card white">
+                    <div class="card-content">
+                        <span class="card-title azul-text">Recuperar contraseña</span>
+                        <div class="row">
+                            <div class="col s12">
+                                <form id="recuperar_form">
+                                    <span id="detalle_recuperar" class="azulclaro-text">Digita tu correo electrónico y te enviaremos un enlace para recuperar tu contraseña</span>
+                                    <div class="input-field">
+                                        <input id="email" type="email" class="validate" aria-required="true">
+                                        <label for="email" data-error="Debes ingresar un correo electrónico válido">
+                                            Ingresa tu correo electrónico registrado
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <img class="responsive-img logo" src="img/LogoEssa.png" alt="Essa">
+                        <div>
+                            <button id="atrasrec_btn" class="btn-flat gris-text">Atrás</button>
+                            <button id="recuperar_btn" class="btn-flat azulclaro-text" type="submit">Recuperar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+
 
     </div>
 
@@ -53,5 +136,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
