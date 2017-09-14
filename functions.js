@@ -10,7 +10,7 @@ var config = {
   };
   firebase.initializeApp(config);
 
-  var hola = document.getElementById('PortalESSA');
+  var portal = document.getElementById('PortalESSA');
   var dbRef = firebase.database().ref().child('text');
   dbRef.on('value', snap => PortalESSA.innerText = snap.val());
 
@@ -48,13 +48,17 @@ var config = {
   });
 
   btnLogout.addEventListener('click', e => {
+    // Evento para cerrar sesion del usuario
     firebase.auth().signOut();
   });
 
   // Añadir un listener en tiempo real
+  //Mostrar el cambio 
    firebase.auth().onAuthStateChanged( firebaseUser => {
+     //Si el usuario esta logueado
     if(firebaseUser) {
       console.log(firebaseUser);
+      //Se muestra el boton de Cerrar Sesión
       btnLogout.classList.remove('hide');
     } else {
       console.log('no logueado');
