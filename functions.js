@@ -31,7 +31,7 @@ var config = {
     var auth = firebase.auth();
     var promise = auth.createUserWithEmailAndPassword(email_reg, password_reg);
     promise.catch(e => console.log(e.message));
-    promise.success(()=>{}); //funcion a ejecutar en caso de registro exitoso
+    promise.success(()=>{}); //funcion a ejecutar en caso de registro exitoso`
   });
 
   /*btnLogout.addEventListener('click', e => {
