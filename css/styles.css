@@ -1,3 +1,21 @@
+@font-face{
+  font-family: aller;
+  src: url('../fonts/Aller.ttf');
+}
+@font-face{
+  font-family: allerCursiva;
+  src: url('../fonts/Aller_cursiva.ttf');
+}
+@font-face{
+  font-family: swis;
+  src: url('../fonts/Swis.ttf');
+}
+
+body{
+  font-family: aller;
+}
+
+
 .azul-text{
     color: #264796 !important;
 }
@@ -16,6 +34,7 @@
 .gris{
     background-color: #727271 !important;
 }
+
 
 
  /* label color */
@@ -54,41 +73,3 @@
   input:focus:not([type]):not([readonly]) + label, input[type="text"]:focus:not(.browser-default):not([readonly]) + label, input[type="password"]:focus:not(.browser-default):not([readonly]) + label, input[type="email"]:focus:not(.browser-default):not([readonly]) + label, input[type="url"]:focus:not(.browser-default):not([readonly]) + label, input[type="time"]:focus:not(.browser-default):not([readonly]) + label, input[type="date"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime-local"]:focus:not(.browser-default):not([readonly]) + label, input[type="tel"]:focus:not(.browser-default):not([readonly]) + label, input[type="number"]:focus:not(.browser-default):not([readonly]) + label, input[type="search"]:focus:not(.browser-default):not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label{
       color: #264796;
   }
-
-  body{
-      background-image: url('../img/lightbulb.jpg');
-      background-size: cover;
-  }
-
-  .main-container{
-      margin-bottom: 0;
-      height: 47.3em;
-  }
-
-  img.logo{
-      width: 20%;
-  }
-  .card-action{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  div.card.white{
-      margin-top: 40%;
-  }
-#login a.olvidaste{
-    font-size: 0.8em;
-    cursor: pointer;
-}
-.btn-flat{
-    padding: 0;
-    margin-left: 1em;
-}
-
-#registro, #recuperar{
-    display: none;
-}
-
-#detalle_recuperar{
-    font-size: 0.8em;
-}

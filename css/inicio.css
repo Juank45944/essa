@@ -1,0 +1,78 @@
+div.side-buttons{
+    display: flex;
+}
+div.side-buttons a{
+    margin-left: 1em;
+}
+img.avatar{
+    width: 35%;
+}
+img.logo{
+    width: 70%;
+}
+div.container-fluid.first{
+    padding-top: 2em;
+}
+h3{
+    font-family: swis;
+    margin-left: 3em;
+    border: 2px solid #264796;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.2em;
+}
+.img-fondo{
+    width: 90%;
+    margin-left: 3em;
+    margin-bottom: 2em;
+}
+.barra-progreso{
+    display: flex;
+    width: 90%;
+    border: 2px solid #727271;
+    border-radius: 10px;
+    margin-left: 4em;
+}
+.pr{
+    height: 2em;
+    border-left: 1px solid #727271;
+    width: 20%;
+}
+.pr:first-child{
+    border-left: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.pr:last-child{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.pr.primero.done{
+    background-color: #264796;
+}
+.pr.segundo.done{
+    background-color: #2F51A0;
+}
+.pr.tercero.done{
+    background-color: #3F63B1;
+}
+.pr.cuarto.done{
+    background-color: #6A92CF;
+}
+.pr.quinto.done{
+    background-color: #95B7E9;
+}
+
+.descr-progreso{
+    margin-left: 4.5em;
+}
+.ingresar-container{
+    display: flex;
+    height: 4em;
+    justify-content: flex-end;
+    align-items: flex-end
+}
+a.btn.azul{
+    font-family: swis;
+}

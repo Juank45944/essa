@@ -12,35 +12,31 @@ var config = {
 
   var email    = document.getElementById('email');
   var password = document.getElementById('password');
+  var nombre_reg    = document.getElementById('nombre_reg');
+  var password_reg = document.getElementById('password_reg');
+  var email_reg    = document.getElementById('email_reg');
+  var email_rec = document.getElementById('email_rec');
   var ingresar_btn = document.getElementById('ingresar_btn');
   var enviar_btn   = document.getElementById('enviar_btn');
-  var btnLogout    = document.getElementById('btnLogout');
+  //var btnLogout    = document.getElementById('btnLogout');
 
   ingresar_btn.addEventListener('click', e => {
-    //Obtener los valores de los campos email y password
-    var email = email.value();
-    var password = password.value();
-    //Almacenar el valor
-    var auth = firebase.auth(); // Sign in
+    var auth = firebase.auth();
     var promise = auth.signInWithEmailAndPassword(email, password);
-    //metodo catch por si existe algun error en el acceso
-    promise.catch(e => console.log(e.message));   
+    promise.catch(e => console.log(e.message));
+    promise.success( () => {}); //funcion a ejecutar en caso de iniciar sesion   
   });
 
   enviar_btn.addEventListener('click', e => {
-    // Obtener email y pass
-    // Comprobar que el email sea real
-    var email = email.value;
-    var pass = password.value;
     var auth = firebase.auth();
-    // Sign in
-    var promise = auth.createUserWithEmailAndPassword(email, pass);
+    var promise = auth.createUserWithEmailAndPassword(email_reg, password_reg);
     promise.catch(e => console.log(e.message));
+    promise.success(()=>{}); //funcion a ejecutar en caso de registro exitoso
   });
 
-  btnLogout.addEventListener('click', e => {
+  /*btnLogout.addEventListener('click', e => {
     // Evento para cerrar sesion del usuario
     firebase.auth().signOut();
-  });
+  });*/
 
 }());
