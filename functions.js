@@ -10,37 +10,28 @@ var config = {
   };
   firebase.initializeApp(config);
 
-  var portal = document.getElementById('PortalESSA');
-  var dbRef = firebase.database().ref().child('text');
-  dbRef.on('value', snap => PortalESSA.innerText = snap.val());
+  var email    = document.getElementById('email');
+  var password = document.getElementById('password');
+  var ingresar_btn = document.getElementById('ingresar_btn');
+  var enviar_btn   = document.getElementById('enviar_btn');
+  var btnLogout    = document.getElementById('btnLogout');
 
-  // Obtener elementos
-  var txtEmail    = document.getElementById('txtEmail');
-  var txtPassword = document.getElementById('txtPassword');
-  var btnLogin    = document.getElementById('btnLogin');
-  var btnSignUp   = document.getElementById('btnSignUp');
-  var btnLogout   = document.getElementById('btnLogout');
-
-  // Evento Boton login
-  btnLogin.addEventListener('click', e => {
+  ingresar_btn.addEventListener('click', e => {
     //Obtener los valores de los campos email y password
-    var email = txtEmail.value;
-    var pass = txtPassword.value;
+    var email = email.value();
+    var password = password.value();
     //Almacenar el valor
-    var auth = firebase.auth();
-
-    // Sign in
-    var promise = auth.signInWithEmailAndPassword(email, pass);
+    var auth = firebase.auth(); // Sign in
+    var promise = auth.signInWithEmailAndPassword(email, password);
     //metodo catch por si existe algun error en el acceso
     promise.catch(e => console.log(e.message));   
   });
 
-  // Añadir evento signup
-  btnSignUp.addEventListener('click', e => {
+  enviar_btn.addEventListener('click', e => {
     // Obtener email y pass
-    // TODO: comprobar que el email sea real
-    var email = txtEmail.value;
-    var pass = txtPassword.value;
+    // Comprobar que el email sea real
+    var email = email.value;
+    var pass = password.value;
     var auth = firebase.auth();
     // Sign in
     var promise = auth.createUserWithEmailAndPassword(email, pass);
@@ -52,17 +43,4 @@ var config = {
     firebase.auth().signOut();
   });
 
-  // Añadir un listener en tiempo real
-  //Mostrar el cambio 
-   firebase.auth().onAuthStateChanged( firebaseUser => {
-     //Si el usuario esta logueado
-    if(firebaseUser) {
-      console.log(firebaseUser);
-      //Se muestra el boton de Cerrar Sesión
-      btnLogout.classList.remove('hide');
-    } else {
-      console.log('no logueado');
-      btnLogout.classList.add('hide');
-    }    
-  });
-} ());
+}());
