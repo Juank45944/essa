@@ -10,28 +10,35 @@ var config = {
   };
   firebase.initializeApp(config);
 
-  var email    = document.getElementById('email');
-  var password = document.getElementById('password');
-  var nombre_reg    = document.getElementById('nombre_reg');
-  var password_reg = document.getElementById('password_reg');
-  var email_reg    = document.getElementById('email_reg');
-  var email_rec = document.getElementById('email_rec');
+
   var ingresar_btn = document.getElementById('ingresar_btn');
   var enviar_btn   = document.getElementById('enviar_btn');
+  var recuperar_btn = document.getElementById('recuperar_btn');
+
   //var btnLogout    = document.getElementById('btnLogout');
 
   ingresar_btn.addEventListener('click', e => {
+    var inputs = getInputs();
     var auth = firebase.auth();
-    var promise = auth.signInWithEmailAndPassword(email, password);
-    promise.catch(e => console.log(e.message));
-    promise.success( () => {}); //funcion a ejecutar en caso de iniciar sesion   
+    auth.signInWithEmailAndPassword(inputs.email, inputs.password)
+      .then( () => console.log("ESOOO!")) //funcion a ejecutar en caso de iniciar sesion   
+      .catch(e => console.log(e.message))
   });
 
   enviar_btn.addEventListener('click', e => {
+    var inputs = getInputs();
     var auth = firebase.auth();
-    var promise = auth.createUserWithEmailAndPassword(email_reg, password_reg);
+    var promise = auth.createUserWithEmailAndPassword(inputs.email_reg, inputs.password_reg);
+    promise.then(()=>{}) //funcion a ejecutar en caso de registro exitoso`
     promise.catch(e => console.log(e.message));
-    promise.success(()=>{}); //funcion a ejecutar en caso de registro exitoso`
+  });
+
+  recuperar_btn.addEventListener('click', e => {
+    var inputs = getInputs();
+    var auth = firebase.auth();
+    var promise = auth.sendPasswordResetEmail(inputs.email_rec);
+    promise.then(()=>{})
+    promise.catch(e => console.log(e.message));
   });
 
   /*btnLogout.addEventListener('click', e => {
@@ -40,3 +47,14 @@ var config = {
   });*/
 
 }());
+
+function getInputs(){
+  return {
+    email : document.getElementById('email').value,
+    password : document.getElementById('password').value,
+    nombre_reg : document.getElementById('nombre_reg').value,
+    password_reg : document.getElementById('password_reg').value,
+    email_reg : document.getElementById('email_reg').value,
+    email_rec : document.getElementById('email_rec').value
+  }
+}
