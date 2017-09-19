@@ -10,6 +10,7 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  var database = firebase.database();
 
   var ingresar_btn = document.getElementById('ingresar_btn');
   var enviar_btn   = document.getElementById('enviar_btn');
@@ -37,7 +38,9 @@ var config = {
     var inputs = getInputs();
     var auth = firebase.auth();
     var promise = auth.sendPasswordResetEmail(inputs.email_rec);
-    promise.then(()=>{})
+    console.log(inputs.email_rec)
+    //funcion a ejecutar en caso de registro exitoso
+    promise.then(()=>console.log("Se ha enviado el correo para restablecimiento de contraseña")) 
     promise.catch(e => console.log(e.message));
   });
 
@@ -58,3 +61,24 @@ function getInputs(){
     email_rec : document.getElementById('email_rec').value
   }
 }
+
+
+//------------------------------------------------------
+//var ref = firebase.database().ref("users");
+
+//console.log(ref)
+
+//var ref = new Firebase("https://portal-essa.firebaseio.com/users")
+
+/*function writeNewUser(userId,nombre_reg,email_reg){
+  firebase.database().ref('users/' + userId).set({
+    nombre: nombre_reg,
+    email: email_reg,
+  });
+}*/
+
+/**
+ * var database = firebase.database();
+ * var ref = database.ref("____");
+ * ref.set
+ */
