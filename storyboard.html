@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nombre_curso</title>
+    <!-- DYNAMIC -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/storyboard.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid first">
+        <div class="row">
+            <div class="col m2 offset-m1">
+                <img class="responsive-img logo" src="img/LogoEssa.png" alt="Essa">
+            </div>
+            <div class="col m3 offset-m6">
+                <div class="side-buttons">
+                    <a class="btn-floating btn-large waves-effect waves-light azul">
+                        <i class="material-icons">home</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light azulclaro">
+                        <i class="material-icons">help_outline</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light gris">
+                        <i class="material-icons">exit_to_app</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row main-content">
+            <div class="col m2">
+                <img class="responsive-image avatar" src="img/sm_saludo.png" alt="Hola!">
+            </div>
+            <div class="col m8 offset-m1">
+                <div class="tablero-row">
+                    <!-- BOTON STORYBOARD -->
+                    <div class="celda btn-celda" id="inicio">
+                        <div class="check-container yellow-text text-darken-2">
+                            <span>INICIO</span>
+                        </div>
+                        <div class="btn-container">
+                            <div class="story-btn circle yellow darken-2">
+                                <i class="material-icons medium white-text">forward</i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LINEA STORYBOARD -->
+                    <div class="celda line-celda">
+                        <div class="check-container"></div>
+                        <div class="story-line"></div>
+                    </div>
+                    <!-- BOTON STORYBOARD -->
+                    <div class="celda btn-celda" id="item1">
+                        <div class="check-container">
+                            <i class="material-icons green-text small hide">done</i>
+                        </div>
+                        <div class="btn-container">
+                            <div class="story-btn circle cyan lighten-1">
+                                <i class="material-icons medium white-text">videocam</i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LINEA STORYBOARD -->
+                    <div class="celda line-celda">
+                        <div class="check-container"></div>
+                        <div class="story-line"></div>
+                    </div>
+                    <!-- BOTON STORYBOARD -->
+                    <div class="celda btn-celda" id="item2">
+                        <div class="check-container">
+                            <i class="material-icons green-text small hide">done</i>
+                        </div>
+                        <div class="btn-container">
+                            <div class="story-btn circle deep-orange lighten-1">
+                                <i class="material-icons medium white-text">art_track</i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LINEA STORYBOARD -->
+                    <div class="celda line-celda">
+                        <div class="check-container"></div>
+                        <div class="story-line"></div>
+                    </div>
+                    <!-- BOTON STORYBOARD -->
+                    <div class="celda btn-celda" id="item3">
+                        <div class="check-container">
+                            <i class="material-icons green-text small hide">done</i>
+                        </div>
+                        <div class="btn-container">
+                            <div class="story-btn circle cyan lighten-1">
+                                <i class="material-icons medium white-text">videocam</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-line-row end">
+                    <div class="vertical-line"></div>
+                </div>
+                <div class="tablero-row reverse">
+                    <!-- BOTON STORYBOARD -->
+                    <div class="celda btn-celda" id="item4">
+                        <div class="check-container">
+                            <i class="material-icons green-text small hide">done</i>
+                        </div>
+                        <div class="btn-container">
+                            <div class="story-btn circle deep-orange lighten-1">
+                                <i class="material-icons medium white-text">art_track</i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LINEA STORYBOARD -->
+                    <div class="celda line-celda">
+                        <div class="check-container"></div>
+                        <div class="story-line"></div>
+                    </div>
+                    <!-- BOTON STORYBOARD -->
+                    <div class="celda btn-celda" id="item5">
+                        <div class="check-container">
+                            <i class="material-icons green-text small hide">done</i>
+                        </div>
+                        <div class="btn-container">
+                            <div class="story-btn circle teal lighten-1">
+                                <i class="material-icons medium white-text">videogame_asset</i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LINEA STORYBOARD -->
+                    <div class="celda line-celda">
+                        <div class="check-container"></div>
+                        <div class="story-line"></div>
+                    </div>
+                    <!-- BOTON STORYBOARD -->
+                    <div class="celda btn-celda" id="fin">
+                        <div class="check-container azul-text">
+                            <span>FIN</span>
+                        </div>
+                        <div class="btn-container">
+                            <div class="story-btn circle azul">
+                                <i class="material-icons medium white-text">flag</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL SAMPLE -->
+    <div id="item1_modal" class="modal">
+        <div class="modal-content">
+            <h4>Video1</h4>
+            <video class="responsive-video" controls>
+                <source src="resources/sample_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
+                Cerrar
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="js/storyboard.js"></script>
+</body>
+
+</html>
