@@ -29,7 +29,7 @@ body{
     background-color: #264796 !important;
 }
 .azulclaro{
-    background-color: #0060AA !important;
+    background-color: #005FAA !important;
 }
 .gris{
     background-color: #727271 !important;
@@ -38,8 +38,8 @@ body{
 
 
  /* label color */
- .input-field label {
-    color: #727271;
+ .input-field label, p {
+    color: #727271 !important;
   }
   /* label focus color */
   .input-field input[type=text]:focus + label {
@@ -64,6 +64,12 @@ body{
   .input-field .prefix.active {
     color: #727271;
   }
+  /*radio button color*/
+  [type="radio"]:checked + label::after{
+    background-color: #264796;
+    border: 2px solid #264796;
+  }
+
 
   input:focus:not([type]):not([readonly]), input[type="text"]:focus:not(.browser-default):not([readonly]), input[type="password"]:focus:not(.browser-default):not([readonly]), input[type="email"]:focus:not(.browser-default):not([readonly]), input[type="url"]:focus:not(.browser-default):not([readonly]), input[type="time"]:focus:not(.browser-default):not([readonly]), input[type="date"]:focus:not(.browser-default):not([readonly]), input[type="datetime"]:focus:not(.browser-default):not([readonly]), input[type="datetime-local"]:focus:not(.browser-default):not([readonly]), input[type="tel"]:focus:not(.browser-default):not([readonly]), input[type="number"]:focus:not(.browser-default):not([readonly]), input[type="search"]:focus:not(.browser-default):not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
     border-bottom: 1px solid #264796;

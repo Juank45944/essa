@@ -28,7 +28,7 @@
                     <a class="btn-floating btn-large waves-effect waves-light azulclaro">
                         <i class="material-icons">help_outline</i>
                     </a>
-                    <a class="btn-floating btn-large waves-effect waves-light gris">
+                    <a class="btn-floating btn-large waves-effect waves-light gris" id="logout">
                         <i class="material-icons">exit_to_app</i>
                     </a>
                 </div>
@@ -38,18 +38,25 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col m6">
-                <img src="img/city2.jpg" class="img-fondo" alt="">     
-                <span class="azulclaro-text descr-progreso">Tu progreso:</span>
+                <div class="cursos-cont">
+                    <h4 class="gris-text">Cursos:</h4>
+                    <div class="collection" id="lista-cursos">
+                        
+                    </div>
+                </div>
+                
+
+                <span class="azulclaro-text descr-progreso" id="msj-progreso">Haz click en algún curso para ver el progreso</span>
                 <div class="barra-progreso">
-                    <div class="pr primero done"></div>
-                    <div class="pr segundo done"></div>
-                    <div class="pr tercero done"></div>
-                    <div class="pr cuarto done"></div>
-                    <div class="pr quinto done"></div>
+                    <div class="pr primero"></div>
+                    <div class="pr segundo"></div>
+                    <div class="pr tercero"></div>
+                    <div class="pr cuarto"></div>
+                    <div class="pr quinto"></div>
                 </div>               
             </div>
             <div class="col m5">
-                <h3 class="azulclaro-text">Bienvenida Lina</h3> <!-- DYNAMIC -->
+                <h3 class="azulclaro-text" id="username"></span></h3>
                 <img class="responsive-image avatar" src="img/sm_saludo.png" alt="Hola!">
                 <div class="ingresar-container">
                     <a class="waves-effect waves-light btn btn-large azul"><i class="material-icons right">call_made</i>Ingresar</a>                        
@@ -67,6 +74,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/inicio.js"></script>
 </body>
 </html>
