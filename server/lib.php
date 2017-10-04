@@ -20,7 +20,7 @@ class API{
     }
 
     public function login($cedula, $pwd){
-        $consulta = "SELECT cedula FROM usuarios WHERE cedula='".$cedula."' AND pwd='".$pwd."'";
+        $consulta = "SELECT cedula, nombre FROM usuarios WHERE cedula='".$cedula."' AND pwd='".$pwd."'";
         
         if ($resultado = $this->con->query($consulta)) {
         
@@ -41,9 +41,7 @@ class API{
             /* cerrar la conexión */
             $this->con->close();
             return $row;
-        }
-        
-        
+        }   
     }
 
     public function register($nombre, $cedula, $email, $genero, $pwd){
@@ -151,6 +149,78 @@ class API{
             $this->con->close();
             return $row;
         }  
+    }
+
+    public function getAllData(){
+        //USUARIOS
+        $consulta = "SELECT cedula, nombre, email FROM usuarios";
+        if($resultado = $this->con->query($consulta)){
+            /* obtener un array asociativo */
+            $usuarios = $this->resultToArray($resultado);
+            array_walk($usuarios, function(&$value) {
+                array_walk($value, function(&$v){
+                    $v = utf8_encode($v);
+                });
+            });
+            /* liberar el conjunto de resultados */
+            $resultado->free();
+            
+        }else{
+            $row['err']= "Hay un error al obtener los cursos, inténtalo más tarde";
+            /* cerrar la conexión */
+            $this->con->close();
+            return $row;
+        }
+
+        //CURSOS
+        $consulta = "SELECT nombre FROM cursos";
+        if($resultado = $this->con->query($consulta)){
+            /* obtener un array asociativo */
+            $cursos = $this->resultToArray($resultado);
+            array_walk($cursos, function(&$value) {
+                array_walk($value, function(&$v){
+                    $v = utf8_encode($v);
+                });
+            });
+            /* liberar el conjunto de resultados */
+            $resultado->free();
+            
+        }else{
+            $row['err']= "Hay un error al obtener los cursos, inténtalo más tarde";
+            /* cerrar la conexión */
+            $this->con->close();
+            return $row;
+        }
+
+        //CURSOSxUSUARIO
+        $consulta = "SELECT usuarios.cedula, usuarios.nombre, cursos.nombre as curso, progreso_curso.etapa_finalizada, progreso_curso.fecha_finalizacion as fecha_fin_etapa FROM usuarios JOIN cursos_usuario ON usuarios.id = cursos_usuario.fk_usuario JOIN cursos ON cursos.id = cursos_usuario.fk_curso JOIN progreso_curso ON progreso_curso.fk_curso_usuario = cursos_usuario.id ORDER BY usuarios.cedula, etapa_finalizada";
+        if($resultado = $this->con->query($consulta)){
+            /* obtener un array asociativo */
+            $cursos_usuario = $this->resultToArray($resultado);
+            array_walk($cursos_usuario, function(&$value) {
+                array_walk($value, function(&$v){
+                    $v = utf8_encode($v);
+                });
+            });
+            /* liberar el conjunto de resultados */
+            $resultado->free();
+            
+        }else{
+            $row['err']= "Hay un error al obtener los cursos, inténtalo más tarde";
+            /* cerrar la conexión */
+            $this->con->close();
+            return $row;
+        }
+
+        $response['usuarios']=$usuarios;
+        $response['cursos']=$cursos;
+        $response['cursos_usuario']=$cursos_usuario;
+
+
+        /* cerrar la conexión */
+        $this->con->close();
+
+        return $response;
     }
 
 

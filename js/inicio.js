@@ -41,6 +41,9 @@ function bindEvents(){
     $('#logout').click(function(){
         logout();
     })
+    $('#ingresar-btn').click(function(){
+        ingresarACurso();
+    })
 }
 
 function getProgress(curso){
@@ -72,4 +75,19 @@ function logout(){
                 window.location.href = "login.html";
             }
         })
+}
+
+function ingresarACurso(){
+    let selectedCurso = $('#lista-cursos a.active').text();
+    switch (selectedCurso) {
+        case "Suspensión":
+            window.location.href = "suspension.html";
+            break;
+        case "Reconexión":
+            window.location.href = "reconexion.html";
+            break;
+        default:
+            alert('Debes seleccionar un curso en la lista de la izquierda para ingresar')
+            break;
+    }
 }
