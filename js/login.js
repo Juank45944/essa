@@ -21,4 +21,5 @@ function bindEvents(){
         $('#login').hide();        
         $('#recuperar').show();
     })
+    $()
 }

@@ -15,7 +15,6 @@ body{
   font-family: aller;
 }
 
-
 .azul-text{
     color: #264796 !important;
 }
@@ -72,4 +71,30 @@ body{
   }
   input:focus:not([type]):not([readonly]) + label, input[type="text"]:focus:not(.browser-default):not([readonly]) + label, input[type="password"]:focus:not(.browser-default):not([readonly]) + label, input[type="email"]:focus:not(.browser-default):not([readonly]) + label, input[type="url"]:focus:not(.browser-default):not([readonly]) + label, input[type="time"]:focus:not(.browser-default):not([readonly]) + label, input[type="date"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime-local"]:focus:not(.browser-default):not([readonly]) + label, input[type="tel"]:focus:not(.browser-default):not([readonly]) + label, input[type="number"]:focus:not(.browser-default):not([readonly]) + label, input[type="search"]:focus:not(.browser-default):not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label{
       color: #264796;
+  }
+
+  .titulo h1{
+    margin-left: 6em;
+    color: #A1A1A5;
+    font-size: 2em;	
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 1px 1px #7A7A7E;
+    transform:scaleX(1.1);
+  }
+
+  .img-persona{
+    width: 100px;
+  }
+
+  .img-ahorcado{
+    width: 50%;
+    margin-top: 3em;
+    margin-left: 4em;
+  }
+  
+  .nube{
+    width: 70%;
+    margin-top: -15em;
+    margin-left: 8em;
   }
