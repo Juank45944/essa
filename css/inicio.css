@@ -76,3 +76,15 @@ h3{
 a.btn.azul{
     font-family: swis;
 }
+.cursos-cont{
+    height: 30em;
+    padding: 2em;
+
+}
+
+.collection .collection-item.active{
+    background-color: #264796;
+}
+.collection a.collection-item{
+    color: #005FAA;
+}

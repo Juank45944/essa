@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio</title>
+    <title>Reconexión</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/cursos.css">
 </head>
+
 <body>
 
 
@@ -22,10 +24,10 @@
             </div>
             <div class="col m3 offset-m6">
                 <div class="side-buttons">
-                    <a class="btn-floating btn-large waves-effect waves-light azul">
+                    <a class="btn-floating btn-large waves-effect waves-light azul" id="home">
                         <i class="material-icons">home</i>
                     </a>
-                    <a class="btn-floating btn-large waves-effect waves-light azulclaro">
+                    <a class="btn-floating btn-large waves-effect waves-light azulclaro" id="help">
                         <i class="material-icons">help_outline</i>
                     </a>
                     <a class="btn-floating btn-large waves-effect waves-light gris" id="logout">
@@ -36,32 +38,27 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col m6">
-                <div class="cursos-cont">
-                    <h4 class="gris-text">Cursos:</h4>
-                    <div class="collection" id="lista-cursos">
-                        
-                    </div>
-                </div>
-                
+        <div class="row main-content">
+            <div class="col m12">
+                <img class="responsive-image ruta" src="img/ruta.png" alt="Ruta">
+            </div>
+            
+        </div>
+    </div>
 
-                <span class="azulclaro-text descr-progreso" id="msj-progreso">Haz click en algún curso para ver el progreso</span>
-                <div class="barra-progreso">
-                    <div class="pr primero"></div>
-                    <div class="pr segundo"></div>
-                    <div class="pr tercero"></div>
-                    <div class="pr cuarto"></div>
-                    <div class="pr quinto"></div>
-                </div>               
-            </div>
-            <div class="col m5">
-                <h3 class="azulclaro-text" id="username"></span></h3>
-                <img class="responsive-image avatar" src="img/sm_saludo.png" alt="Hola!">
-                <div class="ingresar-container">
-                    <a class="waves-effect waves-light btn btn-large azul" id="ingresar-btn"><i class="material-icons right">call_made</i>Ingresar</a>                        
-                </div>              
-            </div>
+
+    <!-- MODAL SAMPLE -->
+    <div id="item1_modal" class="modal">
+        <div class="modal-content">
+            <h4>Video1</h4>
+            <video class="responsive-video" controls>
+                <source src="resources/sample_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
+                Cerrar
+            </a>
         </div>
     </div>
 
@@ -69,11 +66,11 @@
 
 
 
-    
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="js/inicio.js"></script>
+    <script src="js/reconexion.js"></script>
 </body>
+
 </html>

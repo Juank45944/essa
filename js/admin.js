@@ -9,9 +9,11 @@ $(function(){
 
 
 function bindEvents(){
+
     $('#ingresar_btn').click(function(){
         login();
     })
+
 }
 
 
@@ -29,6 +31,7 @@ function validateLogin(){
 }
 
 
+
 function login(){
     let url = server+'login.php';
     if(validateLogin()){
@@ -39,11 +42,14 @@ function login(){
                 if(response.err){
                     alert(response.err);
                 }else{
-                    sessionStorage.setItem('token', response.token);
-                    window.location.href="inicio.html";
+                    if(response.nombre == "Administrador"){
+                        sessionStorage.setItem('token', response.token);
+                        window.location.href="main_admin.html";
+                    }else{
+                        alert('Usted no tiene permisos para acceder a la plataforma de Administración');
+                    }
                 }
             });
     }
 
 }
-
