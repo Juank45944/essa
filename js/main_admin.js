@@ -22,6 +22,9 @@ function bindEvents(){
     $('#enviar_btn').click(function(){
         register();
     })
+    $('#usuario-curso-btn').click(function(){
+        asignarCursoUsuario();
+    })
     
 }
 
@@ -31,8 +34,13 @@ function getUserData(){
         .done(function(res){
             data = JSON.parse(res);
             if(data.err){
-                alert(data.err);
-                window.location.href = "admin.html";
+                swal(
+                    'Error',
+                    data.err,
+                    'error'
+                  ).then(function(){
+                     window.location.href = "admin.html";
+                  }) 
             }else{
                 loadTables(data);
             }
@@ -48,10 +56,18 @@ function validateRegister(){
     let pwd2 = $('#password_repeat').val();
 
     if(nombre=="" ||cedula=="" ||email=="" ||genero=="" ||pwd=="" ||pwd2==""){
-        alert("Ningún campo debe ser vacío");
+        swal(
+            'Error',
+            'Ningún campo debe ser vacío',
+            'error'
+          )
         return null;
     }else if(pwd != pwd2){
-        alert("Las contraseñas no coinciden");
+        swal(
+            'Error',
+            'Las contraseñas no coinciden',
+            'error'
+          )
         return null;
     }else{
         return {
@@ -74,14 +90,75 @@ function register(){
             .done(function(res){
                 let response = JSON.parse(res);
                 if(response.err){
-                    alert(response.err);
+                    swal(
+                        'Error',
+                        response.err,
+                        'error'
+                      )
                 }else{
-                    alert('Usuario añadido con éxito');
-                    $('#usuarios_table').empty();
-                    getUserData();
+                    swal(
+                        'Éxito',
+                        'Usuario añadido correctamente',
+                        'success'
+                      ).then(function(){
+                          $('#usuarios_table').empty();
+                          getUserData();
+                      })
                 }
             })
-    }else alert('no valid');
+    }else{
+        swal(
+            'Error',
+            'Se presentó un error, inténtalo de nuevo',
+            'error'
+          )
+    } 
+}
+
+function asignarCursoUsuario(){
+    //obtener el curso seleccionado para asignarle usuarios
+    let selectedCurso = $('#select-cursos').val(),
+        idCurso,
+        userId = [],
+        url = server+'/asignarCurso.php';
+    switch (selectedCurso) {
+        case "Suspensión":
+            idCurso = 1;
+            break;
+        case "Reconexión":
+            idCurso = 2;
+            break;
+        default:
+            idCurso = 0;
+            break;
+    }
+
+    //obtener los usuarios que serán asignados
+    $('input[type="checkbox"]:checked').each(function(){
+        userId.push($(this).val());
+    })
+    $.post(url, {token: sessionStorage.getItem('token'), users: JSON.stringify(userId), curso: idCurso})
+        .then(function(res){
+            let response = JSON.parse(res);
+            if(response.err){
+                swal(
+                    'Error',
+                    response.err,
+                    'error'
+                  )
+            }else{
+                swal(
+                    'Éxito',
+                    'Usuario añadido correctamente al curso indicado',
+                    'success'
+                  ).then(function(){
+                      $('#cursousuario_table, #cursos_table, #usuarios_table').empty();
+                      $('#select-cursos option').not('option:first').remove();
+                      $('.user-check p').remove();
+                      getUserData();
+                  })
+            }
+        })
 }
 
 function loadTables(data){
@@ -93,12 +170,21 @@ function loadTables(data){
             <td>${usuario.email}</td>
         </tr>
         `)
+        $('.user-check').append(`
+        <p>
+            <input type="checkbox" id="${usuario.cedula}" value="${usuario.cedula}"/>
+            <label for="${usuario.cedula}">${usuario.nombre}</label>
+        </p>
+        `)
     }, this);
     data.cursos.forEach(function(curso) {
         $('#cursos_table').append(`
         <tr>
             <td>${curso.nombre}</td>
         </tr>
+        `)
+        $('#select-cursos').append(`
+        <option value="${curso.nombre}">${curso.nombre}</option>
         `)
     }, this);
     data.cursos_usuario.forEach(function(cu) {

@@ -11,10 +11,15 @@ function getUserData(){
         .done(function(res){
             data = JSON.parse(res);
             if(data.err){
-                alert(data.err);
-                window.location.href = "login.html";
+                swal(
+                    'Error',
+                    data.err,
+                    'error'
+                  ).then(function(){
+                      window.location.href = "login.html";
+                  })
             }else{
-                console.log('bien');
+                //sesion confirmada. cargar datos aquí.
             }
         })
 }

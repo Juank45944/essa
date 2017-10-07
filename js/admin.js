@@ -18,14 +18,18 @@ function bindEvents(){
 
 
 function validateLogin(){
-    let cedula = $('#cedula').val();
+    let email = $('#email').val();
     let password = $('#password').val();
 
-    if(cedula=="" || password==""){
-        alert("Ningún campo debe ser vacío")
+    if(email=="" || password==""){
+        swal(
+            'Error',
+            'Ningún campo debe ser vacío',
+            'error'
+          )
         return null;
     }else{
-        return {cedula: cedula, pwd: password};
+        return {email: email, pwd: password};
     }
 
 }
@@ -40,13 +44,21 @@ function login(){
             .done(function(res){
                 let response = JSON.parse(res);
                 if(response.err){
-                    alert(response.err);
+                    swal(
+                        'Error',
+                        response.err,
+                        'error'
+                      )
                 }else{
                     if(response.nombre == "Administrador"){
                         sessionStorage.setItem('token', response.token);
                         window.location.href="main_admin.html";
                     }else{
-                        alert('Usted no tiene permisos para acceder a la plataforma de Administración');
+                        swal(
+                            'Error',
+                            'Usted no tiene permisos para acceder a la plataforma de Administración',
+                            'error'
+                          )
                     }
                 }
             });

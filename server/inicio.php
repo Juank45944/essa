@@ -11,7 +11,7 @@ if(isset($_POST['token']) && $_POST['token']!="" && $_POST['token'] == $_SESSION
         $response = $api->getInicioData($_SESSION['user_id']);
     }
 }else{
-    $response['err'] = "No has iniciado sesión, haz click en Aceptar para ir a la página de inicio de sesión.";
+    $response['err'] = "No has iniciado sesión, haz click en OK para ir a la página de inicio de sesión.";
 }
 
 

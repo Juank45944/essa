@@ -3,8 +3,8 @@
 require('./lib.php');
 
 $api = new API();
-if (isset($_POST['cedula']) && isset($_POST['pwd'])) {
-    $response = $api->login($_POST['cedula'], $_POST['pwd']);
+if (isset($_POST['email']) && isset($_POST['pwd'])) {
+    $response = $api->login($_POST['email'], $_POST['pwd']);
     if(isset($response['cedula'])){
         $response['token'] = $api->getToken(20);
         session_start();

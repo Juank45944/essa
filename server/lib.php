@@ -19,8 +19,8 @@ class API{
         } 
     }
 
-    public function login($cedula, $pwd){
-        $consulta = "SELECT cedula, nombre FROM usuarios WHERE cedula='".$cedula."' AND pwd='".$pwd."'";
+    public function login($email, $pwd){
+        $consulta = "SELECT cedula, nombre FROM usuarios WHERE email='".$email."' AND cedula='".$pwd."'";
         
         if ($resultado = $this->con->query($consulta)) {
         
@@ -28,7 +28,7 @@ class API{
             $row = $resultado->fetch_array(MYSQLI_ASSOC);
             
             if ( is_null($row['cedula']) || $row['cedula']=="" ) {
-                $row['err']= "La cédula o la contraseña están equivocadas, inténtalo de nuevo.";
+                $row['err']= "El correo electrónico o la contraseña están equivocadas, inténtalo de nuevo.";
             }
 
             /* liberar el conjunto de resultados */
@@ -37,7 +37,7 @@ class API{
             $this->con->close();
             return $row;
         }else {
-            $row['err']= "La cédula o la contraseña están equivocadas, inténtalo de nuevo.";
+            $row['err']= "El correo electrónico o la contraseña están equivocadas, inténtalo de nuevo.";
             /* cerrar la conexión */
             $this->con->close();
             return $row;
@@ -51,6 +51,34 @@ class API{
             return true;
             $this->con->close();
         }else return false;
+    }
+
+    public function asignarCurso($users, $curso){
+        //verificar si cada usuario ya está en el curso que se va a asignar
+        $usuariosAgregar = array();
+        foreach ($users as $user) {
+            $consulta= "SELECT * FROM cursos_usuario JOIN usuarios ON usuarios.id = cursos_usuario.fk_usuario WHERE usuarios.cedula = '".$user."' AND cursos_usuario.fk_curso = ".$curso;
+            if($resultado = $this->con->query($consulta)){
+                $filas = $resultado->fetch_assoc();
+                
+                if(count($filas)==0){
+                    array_push($usuariosAgregar, $user);
+                }
+            }
+        }
+        
+
+        //insertar solo los usuarios que no han sido añadidos ya al curso indicado
+        $consulta = "";
+        $created = true;
+        foreach ($usuariosAgregar as $user) {
+            $consulta .= "INSERT INTO cursos_usuario (fk_usuario, fk_curso, finalizado) VALUES((SELECT id FROM usuarios WHERE usuarios.cedula = '".$user."'), ".$curso.", 0)";
+            if($resultado = $this->con->query($consulta)){
+                
+            }else $created = false;
+        }
+        return $created;
+
     }
 
     public function crypto_rand_secure($min, $max)

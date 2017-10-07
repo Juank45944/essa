@@ -11,8 +11,13 @@ function getUserData(){
         .done(function(res){
             data = JSON.parse(res);
             if(data.err){
-                alert(data.err);
-                window.location.href = "login.html";
+                swal(
+                    'Error',
+                    data.err,
+                    'error'
+                  ).then(function(){
+                      window.location.href = "login.html";
+                  })
             }else{
                 insertCursos(data);
             }
@@ -87,7 +92,11 @@ function ingresarACurso(){
             window.location.href = "reconexion.html";
             break;
         default:
-            alert('Debes seleccionar un curso en la lista de la izquierda para ingresar')
+            swal(
+                'Atención',
+                'Debes seleccionar un curso en la lista de la izquierda para ingresar',
+                'info'
+            )
             break;
     }
 }

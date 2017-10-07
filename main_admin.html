@@ -74,29 +74,6 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">book</i>Añadir curso</div>
-                        <div class="collapsible-body">
-                            <div class="row">
-                                <div class="col s12">
-                                    <form id="registro_form">
-                                        <div class="input-field">
-                                            <input id="nombre_curso" type="text" class="validate" aria-required="true">
-                                            <label for="nombre_reg" data-error="Debes ingresar tu nombre completo">
-                                                Nombre curso
-                                            </label>
-                                        </div>
-                                        <div class="input-field">
-                                            <textarea id="descripcion_curso" class="materialize-textarea"></textarea>
-                                            <label for="descripcion_curso">Descripcion</label>
-                                        </div>
-                                        
-                                    </form>
-                                    <button id="curso_btn" class="btn azulclaro">Enviar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
                         <div class="collapsible-header"><i class="material-icons">person_add</i>Asignar curso a usuario</div>
                         <div class="collapsible-body">
                             <div class="row">
@@ -104,33 +81,17 @@
                                     <form id="registro_form">
                                         <div class="user-check">
                                             <span>Selecciona los usuarios a los cuales le asignarás un curso</span>
-                                            <p>
-                                                <input type="checkbox" id="test5" />
-                                                <label for="test5">User</label>
-                                            </p>
-                                            <p>
-                                                <input type="checkbox" id="test1" />
-                                                <label for="test1">User</label>
-                                            </p>
-                                            <p>
-                                                <input type="checkbox" id="test2" />
-                                                <label for="test2">User</label>
-                                            </p>
-
                                         </div>
                                         
                                         <p></p>
                                         <span>Selecciona el curso a asignar</span>
-                                        <select class="browser-default">
-                                          <option value="" disabled selected>Choose your option</option>
-                                          <option value="1">Option 1</option>
-                                          <option value="2">Option 2</option>
-                                          <option value="3">Option 3</option>
+                                        <select id="select-cursos" class="browser-default">
+                                          <option value="" disabled selected>Elige uno</option>
                                         </select>
                                         <p></p>
                                         
                                     </form>
-                                    <button id="enviar_btn" class="btn azulclaro">Enviar</button>
+                                    <button id="usuario-curso-btn" class="btn azulclaro">Enviar</button>
                                 </div>
                             </div>
                         </div>
@@ -200,6 +161,10 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- SWEET ALERT2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
     <script src="js/main_admin.js"></script>
 </body>
 </html>
