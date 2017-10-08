@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Bogota');
+
 
 class API{
 
@@ -67,14 +69,19 @@ class API{
             }
         }
         
-
         //insertar solo los usuarios que no han sido añadidos ya al curso indicado
         $consulta = "";
         $created = true;
+        $date = date('Y-m-d h:i:s');
         foreach ($usuariosAgregar as $user) {
-            $consulta .= "INSERT INTO cursos_usuario (fk_usuario, fk_curso, finalizado) VALUES((SELECT id FROM usuarios WHERE usuarios.cedula = '".$user."'), ".$curso.", 0)";
+            $consulta = "INSERT INTO cursos_usuario (fk_usuario, fk_curso, finalizado) VALUES((SELECT id FROM usuarios WHERE usuarios.cedula = '".$user."'), ".$curso.", 0);";
             if($resultado = $this->con->query($consulta)){
-                
+                $consulta2 = "INSERT INTO progreso_curso (fk_curso_usuario, etapa_finalizada, fecha_finalizacion) VALUES ((SELECT id FROM cursos_usuario WHERE fk_usuario= (SELECT id FROM usuarios WHERE usuarios.cedula = '".$user."') AND fk_curso=".$curso." ), 0, '".$date."');";
+                if($resultado2 = $this->con->query($consulta2)){
+
+                }else{
+                    $created = false;
+                }
             }else $created = false;
         }
         return $created;
