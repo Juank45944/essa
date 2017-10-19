@@ -1,0 +1,104 @@
+div.side-buttons{
+    display: flex;
+}
+div.side-buttons a{
+    margin-left: 1em;
+}
+img.avatar{
+    margin-top: 0.5em;
+    width: 100%;
+}
+img.logo{
+    width: 70%;
+}
+div.container-fluid.first{
+    padding-top: 2em;
+}
+.img-fondo{
+    width: 90%;
+    margin-left: 3em;
+    margin-bottom: 2em;
+}
+.barra-progreso{
+    display: flex;
+    width: 90%;
+    border: 2px solid #727271;
+    border-radius: 10px;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.pr{
+    height: 2em;
+    border-left: 1px solid #727271;
+    width: 20%;
+}
+.pr:first-child{
+    border-left: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.pr:last-child{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.pr.inicio.done{
+    background-color: #076661;
+}
+.pr.primero.done{
+    background-color: #CF4232;
+}
+.pr.segundo.done{
+    background-color: #EB7F23;
+}
+.pr.tercero.done{
+    background-color: #FAC023;
+}
+.pr.cuarto.done{
+    background-color: #058777;
+}
+.pr.quinto.done{
+    background-color: #6B202E;
+}
+.pr.sexto.done{
+    background-color: #B0E24B;
+}
+.pr.septimo.done{
+    background-color: #F31D50;
+}
+.pr.ocatavo.done{
+    background-color: #2397C6;
+}
+.pr.noveno.done{
+    background-color: #2EAD40;
+}
+.pr.decimo.done{
+    background-color: #FFCE21;
+}
+.pr.once.done{
+    background-color: #1B443F;
+}
+
+.descr-progreso{
+    margin-left: 1.5em;
+}
+.ingresar-container{
+    display: flex;
+    height: 4em;
+    justify-content: center;
+    align-items: center;
+}
+a.btn.azul{
+    font-family: swis;
+}
+.cursos-cont{
+    height: 25em;
+    padding: 2em;
+}
+
+.collection .collection-item.active{
+    background-color: #264796;
+}
+.collection a.collection-item{
+    color: #005FAA;
+}

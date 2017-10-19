@@ -1,0 +1,60 @@
+
+body {
+  max-width: 1088px;
+  margin-top: 6em;
+  background: url('../img/memoria.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 1088px;  
+}
+#picbox {
+	margin: 0px auto;
+	width: 640px;
+}
+#boxcard {
+	z-index: 1;
+	margin: 10px 0 0;
+}
+#boxcard div{
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	padding: 5px;
+	border: 4px solid #0060AA;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 0 1px 5px rgba(0,0,0,.5);
+  background: #B1B1B1;
+	z-index: 2;
+}
+#boxcard div img {
+	display: none;
+	border-radius: 10px;
+	z-index: 3;
+}
+#boxbuttons {
+	text-align: center;
+	margin: 20px;
+	display: block;
+}
+#boxbuttons .button {
+	text-transform: uppercase;
+	background: #0060AA;
+	padding: 5px 10px;
+	margin: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#boxbuttons .button:hover {
+	background: #999;
+}
+#avatar{
+	margin-top: -38em;
+	margin-left: 45em;
+	width: 20em;
+}
+#memoria{
+	margin-left: 3em;
+}

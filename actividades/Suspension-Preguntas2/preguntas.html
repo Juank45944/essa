@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preguntas Suspensión</title>
+    <!-- DYNAMIC -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/preguntas-suspension.css"/>    
+</head>
+
+<body>
+    <div class="card-panel hoverable" id="card-tam">
+                    <div class="card-content grey-text">
+                        <form action="" method="post" id='mostrarPregunta'>       
+                            <button class='btn btn-primary azulclaro hoverable'>
+                                <i class="large material-icons left">live_help</i>Mostrar pregunta   
+                                <span id='preguntaActual'>0</span>/<span id='numPreguntas'>0</span>
+                            </button>
+                            PUNTOS: 
+                                  Positivos <i class="material-icons">mood</i><span class='bagge' id='numRespuestasCorrectas'>0</span>
+                                  - Negativos <i class="material-icons">mood_bad</i> <span class='bagge' id='numRespuestasIncorrectas'>0</span>
+                        </form>                         
+                    <div id="tablero">
+                        <h1 id='pregunta-titulo'>¿Preguntas Call Center ESSA?</h1>
+                        <div class="progress">
+                            <div id='barra-progreso' class="determinate" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            </div>
+                        </div>
+                            <ol id="pregunta-respuestas">
+                            </ol>
+                        <div class="card-action">            
+                            <a href='#' class='btn btn-success azulclaro' id='btn-responder'>Responder</a> 
+                           <!-- <a href='#' class='btn btn-warning azulclaro' id='btn-ceder-turno'>Ceder el turno</a>-->
+                        </div>
+                    </div>
+        </div>
+    </div>     
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jueguito-jugar.js"></script>
+    <script type="text/javascript" src="js/preguntas-suspension.js"></script>
+</body>
+
+</html>

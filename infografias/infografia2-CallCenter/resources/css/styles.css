@@ -1,0 +1,81 @@
+@font-face{
+    font-family: aller;
+    src: url('../fonts/Aller_Rg.ttf');
+}
+body{
+    font-family: aller;
+}
+img.titulo{
+    width: 100%;
+}
+.calificacion-detail{
+    width: 80%;
+    margin-left: 1.4em;
+    display: flex;
+    justify-content: space-between;
+}
+div.row.first{
+    padding-bottom: 1em;
+    border-bottom: 2px dashed rgb(12, 69, 152);
+    margin-left: 0;
+    margin-right: 0;
+}
+img.atrib-img{
+    width: 90%;
+    margin-top: 1em;
+}
+span.atrib-title{
+    font-size: 1.2em;
+}
+.atrib-cont{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.calif-cont{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calif-cuadro{
+    width: 80%;
+}
+#reloj-img{
+    margin-top: 7em;
+}
+#extintor-img{
+    margin-top: 1em;
+}
+#colores-img{
+    margin-top: 1em;
+    width: 70%;
+}
+.subtitle-momento{
+    color: #999999;
+    font-size: 0.8em;
+    margin-left: 1em;
+    margin-top: 0.3em;
+}
+.space-atrib-first{
+    margin-top: 5em;
+}
+.space-atrib-first-2{
+    margin-top: 2em;
+}
+#tiempo-img, #carne-img, #comunicacion-img, #orienta-img, img.img-70{
+    width: 70%;
+}
+.collapsible-header{
+    height: 4em;
+}
+.collapsible-header i{
+    font-size: 2.5em;
+}
+#hello-img{
+    margin-top: 3em;
+}
+#parlante-img{
+    width: 70%;
+}

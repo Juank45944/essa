@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/animate.css">    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid first">
+        <div class="row">
+            <div class="col m2 offset-m1">
+                <img class="responsive-img logo" src="img/LogoEssa.png" alt="Essa">
+            </div>
+            <div class="col m3 offset-m6">
+                <div class="side-buttons">
+                    <a class="btn-floating btn-large waves-effect waves-light azul">
+                        <i class="material-icons">home</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light azulclaro">
+                        <i class="material-icons">help_outline</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light gris" id="logout">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col m6">
+                <div class="cursos-cont">
+                    <h4 class="gris-text">Cursos:</h4>
+                    <div class="collection" id="lista-cursos">
+
+                    </div>
+                </div>
+                <span class="azulclaro-text descr-progreso" id="msj-progreso">Haz click en algún curso para ver el progreso</span>
+                <div class="barra-progreso">
+
+                </div>
+                <div class="ingresar-container">
+                    <a class="waves-effect waves-light btn btn-large azul" id="ingresar-btn"><i class="material-icons right">call_made</i>Ingresar</a>
+                </div>
+            </div>
+            <div class="col m5">
+                <div class="row">
+                    <div class="col s4">
+                        <img class="responsive-image avatar" src="img/sm_saludo.png" alt="Hola!">
+                    </div>
+                    <div class="col s8">
+                        <div class="speech-bubble">
+                            <h5 class="azulclaro-text" id="username"></h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus et, iusto maxime magni, autem
+                                fuga consequatur quos, suscipit deleniti recusandae perferendis architecto illum enim adipisci.
+                                Harum explicabo ipsum in neque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- LOADER -->
+    <div class="loader-container">
+        <div class="loader">
+            <h5>Cargando...</h5>
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- END LOADER -->
+
+
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- SWEET ALERT2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="js/inicio.js"></script>
+</body>
+
+</html>
