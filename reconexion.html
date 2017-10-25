@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reconexión</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cursos.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid first">
+        <div class="row">
+            <div class="col m2 offset-m1">
+                <img class="responsive-img logo" src="img/LogoEssa.png" alt="Essa">
+            </div>
+            <div class="col m3 offset-m6">
+                <div class="side-buttons">
+                    <a class="btn-floating btn-large waves-effect waves-light azul" id="home">
+                        <i class="material-icons">home</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light azulclaro" id="help">
+                        <i class="material-icons">help_outline</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light gris" id="logout">
+                        <i class="material-icons">exit_to_app</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row main-content">
+            <div class="col m12">
+                <img class="responsive-image ruta" src="img/ruta.png" alt="Ruta">
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- MODAL SAMPLE -->
+    <div id="item1_modal" class="modal">
+        <div class="modal-content">
+            <h4>Video1</h4>
+            <video class="responsive-video" controls>
+                <source src="resources/sample_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
+                Cerrar
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- SWEET ALERT2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="js/reconexion.js"></script>
+</body>
+
+</html>

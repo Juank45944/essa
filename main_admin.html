@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administración</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main_admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h1>Bienvenido Administrador</h1>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">person</i>Añadir usuario</div>
+                        <div class="collapsible-body">
+                            <div class="row">
+                                <div class="col s12">
+                                    <form id="registro_form">
+                                        <div class="input-field">
+                                            <input id="nombre_reg" type="text" class="validate" aria-required="true">
+                                            <label for="nombre_reg" data-error="Debes ingresar tu nombre completo">
+                                                Nombre completo
+                                            </label>
+                                        </div>
+                                        <div class="input-field">
+                                            <input id="cedula_reg" type="number" class="validate" aria-required="true">
+                                            <label for="cedula_reg" data-error="Debes ingresar tu número de cédula">
+                                                Número de Cédula
+                                            </label>
+                                        </div>
+                                        <div class="input-field">
+                                            <input id="email_reg" type="email" class="validate" aria-required="true">
+                                            <label for="email_reg" data-error="Debes ingresar un correo electrónico válido">
+                                                Correo electrónico
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <p>Género</p>
+                                            <p>
+                                                <input name="genero" type="radio" id="masculino" value="m" />
+                                                <label for="masculino">Masculino</label>
+                                            </p>
+                                            <p>
+                                                <input name="genero" type="radio" id="femenino" value="f" />
+                                                <label for="femenino">Femenino</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field">
+                                                <input id="password_reg" type="password" class="validate" aria-required="true">
+                                                <label for="password_reg" data-error="Ingresa tu contraseña">Crea una contraseña</label>
+                                        </div>
+                                        <div class="input-field">
+                                                <input id="password_repeat" type="password" class="validate" aria-required="true">
+                                                <label for="password_repeat" data-error="Repite la contraseña">Ingresa nuevamente tu contraseña</label>
+                                        </div>
+                                        
+                                    </form>
+                                    <button id="enviar_btn" class="btn azulclaro">Enviar</button>
+                                </div>
+                            </div>
+
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">person_add</i>Asignar curso a usuario</div>
+                        <div class="collapsible-body">
+                            <div class="row">
+                                <div class="col s12">
+                                    <form id="registro_form">
+                                        <div class="user-check">
+                                            <span>Selecciona los usuarios a los cuales le asignarás un curso</span>
+                                        </div>
+                                        
+                                        <p></p>
+                                        <span>Selecciona el curso a asignar</span>
+                                        <select id="select-cursos" class="browser-default">
+                                          <option value="" disabled selected>Elige uno</option>
+                                        </select>
+                                        <p></p>
+                                        
+                                    </form>
+                                    <button id="usuario-curso-btn" class="btn azulclaro">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s12 m7 offset-m1">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#usuarios-reg">Usuarios</a></li>
+                    <li class="tab col s3"><a href="#cursos-reg">Cursos</a></li>
+                    <li class="tab col s5"><a href="#cursos_usuarios-reg">Progreso por curso</a></li>
+                </ul>
+
+
+                <div id="usuarios-reg">
+                    <h4>Usuarios</h4>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th class="center-align">Cedula</th>
+                                <th class="center-align">Nombre</th>
+                                <th class="center-align">Correo electrónico</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody id="usuarios_table">
+                        </tbody>
+                    </table>
+                </div>
+                <div id="cursos-reg">
+                    <h4>Cursos</h4>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Nombre del curso</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody id="cursos_table">
+                        </tbody>
+                    </table>
+                </div>
+                <div id="cursos_usuarios-reg">
+                    <h4>Progreso por curso</h4>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th class="center-align">Cédula</th>
+                                <th class="center-align">Nombre</th>
+                                <th class="center-align">Curso</th>
+                                <th class="center-align">Etapa finalizada</th>
+                                <th class="center-align">Fecha de finalización</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody id="cursousuario_table">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- SWEET ALERT2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="js/main_admin.js"></script>
+</body>
+</html>
