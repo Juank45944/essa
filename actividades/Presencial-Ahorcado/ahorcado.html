@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ahorcado</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/ahorcado.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">       
+            <div class="col s5">
+                <div class="">
+                    <div class="info">
+                        <h4 class="text-center"><img class="img-ahorcado" src="img/ahorcado1.png" id="imagen"></h4>
+                        <p id="pregunta"></p>        
+                        <div>
+                            <h3 class="palabras" id="secreto"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s5">
+                <div>
+                    <div id="letras"></div>                                      
+                </div>
+            </div>		
+            <div class="col s2"> 
+                <img class="img-persona" src="img/SeñorAhorcadoPresencial.png" alt="">     
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s4">
+                <div class="card-panel orange lighten-2" id="card-tam">
+                    <p class="white-text"><i class="material-icons blue-text">check</i> Tienes 5 oportunidades <br>
+                        <i class="material-icons blue-text">check</i> La palabra que debes adivinar está relacionada con Estrategia Presencial. <br>
+                        <i class="material-icons blue-text">check</i> Cuentas con x minutos para completar el juego. MUCHA SUERTE!                    
+                    </p>
+                </div>           
+            </div>
+        </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>    
+    <script src="js/ahorcado.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+@font-face{
+  font-family: aller;
+  src: url('../fonts/Aller.ttf');
+}
+@font-face{
+  font-family: allerCursiva;
+  src: url('../fonts/Aller_cursiva.ttf');
+}
+@font-face{
+  font-family: swis;
+  src: url('../fonts/Swis.ttf');
+}
+
+body{
+  font-family: aller;
+}
+
+
+.azul-text{
+    color: #264796 !important;
+}
+.azulclaro-text{
+    color: #005FAA !important;
+}
+.gris-text{
+    color: #727271 !important;
+}
+.azul{
+    background-color: #264796 !important;
+}
+.azulclaro{
+    background-color: #005FAA !important;
+}
+.gris{
+    background-color: #727271 !important;
+}
+
+
+
+ /* label color */
+ .input-field label, p {
+    color: #727271 !important;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #727271;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #727271;
+    box-shadow: 0 1px 0 0 #727271;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #727271;
+    box-shadow: 0 1px 0 0 #727271;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #727271;
+    box-shadow: 0 1px 0 0 #727271;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #727271;
+  }
+  /*radio button color*/
+  [type="radio"]:checked + label::after{
+    background-color: #264796;
+    border: 2px solid #264796;
+  }
+
+
+  input:focus:not([type]):not([readonly]), input[type="text"]:focus:not(.browser-default):not([readonly]), input[type="password"]:focus:not(.browser-default):not([readonly]), input[type="email"]:focus:not(.browser-default):not([readonly]), input[type="url"]:focus:not(.browser-default):not([readonly]), input[type="time"]:focus:not(.browser-default):not([readonly]), input[type="date"]:focus:not(.browser-default):not([readonly]), input[type="datetime"]:focus:not(.browser-default):not([readonly]), input[type="datetime-local"]:focus:not(.browser-default):not([readonly]), input[type="tel"]:focus:not(.browser-default):not([readonly]), input[type="number"]:focus:not(.browser-default):not([readonly]), input[type="search"]:focus:not(.browser-default):not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid #264796;
+    -webkit-box-shadow: 0 1px 0 0 #264796;
+    box-shadow: 0 1px 0 0 #264796;
+  }
+  input:focus:not([type]):not([readonly]) + label, input[type="text"]:focus:not(.browser-default):not([readonly]) + label, input[type="password"]:focus:not(.browser-default):not([readonly]) + label, input[type="email"]:focus:not(.browser-default):not([readonly]) + label, input[type="url"]:focus:not(.browser-default):not([readonly]) + label, input[type="time"]:focus:not(.browser-default):not([readonly]) + label, input[type="date"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime"]:focus:not(.browser-default):not([readonly]) + label, input[type="datetime-local"]:focus:not(.browser-default):not([readonly]) + label, input[type="tel"]:focus:not(.browser-default):not([readonly]) + label, input[type="number"]:focus:not(.browser-default):not([readonly]) + label, input[type="search"]:focus:not(.browser-default):not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label{
+      color: #264796;
+  }
+
+  .speech-bubble {
+    position: relative;
+    background: #E4E4E4;
+    border-radius: .4em;
+    padding: 1em;
+  }
+  
+  .speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-right-color: #E4E4E4;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -13.5px;
+    margin-left: -27px;
+  }
+
+  .loader-container{
+    position: absolute;
+    z-index: 2000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #727271;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    width: 40%;
+    height: 30%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.swal2-modal{
+  z-index: 3000;
+}

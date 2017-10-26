@@ -1,0 +1,26 @@
+h2, h4{
+    color: #727271;
+}
+.container{
+    width: 90%;
+}
+.side-buttons{
+    padding-top: 1em;
+}
+[type="checkbox"]:checked + label::before{
+    border-right: 2px solid #264796;
+    border-bottom: 2px solid #264796;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #264796;
+}
+.tabs .tab a{
+    color: #005FAA;
+}
+.tabs .indicator{
+    background-color: #005FAA;
+}
+#usuarios-reg, #cursos-reg, #cursos_usuarios-reg{
+    max-height: 500px;
+    overflow: auto;
+}

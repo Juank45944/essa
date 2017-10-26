@@ -1,0 +1,208 @@
+body{
+	max-width: 1088px;	
+    background: url("../img/MarcoPresencial-01.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1088px;  
+}
+/* Begin bidirectionality settings (do not change) */
+BDO[DIR="ltr"]  { direction: ltr; unicode-bidi: bidi-override }
+BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override }
+
+*[DIR="ltr"]    { direction: ltr; unicode-bidi: embed }
+*[DIR="rtl"]    { direction: rtl; unicode-bidi: embed }
+
+@media print {
+  h1            { page-break-before: always }
+  h1, h2, h3,
+  h4, h5, h6    { page-break-after: avoid }
+  ul, ol, dl    { page-break-before: avoid }
+}
+::selection { background: #0078D7; color:#FFF; text-shadow:none !important; }
+::-moz-selection { background: #0078D7;color:#FFF;text-shadow:none !important; }
+/* @group Reset */
+a{
+	text-decoration: none;
+	outline: 0;
+	color: #004294;
+}
+a:hover{
+	color: #FFF;
+	background:RGBA(255,255,255,0.2);
+	text-shadow:1px 1px 1px #6BB2EC,1px 1px 0 #6BB2EC,0 2px 2px #6BB2EC;
+}
+
+/* #----------------- */
+del{
+	color: #BFBFBF;
+}
+cite{
+	color: #4D4D4D;
+	background: #FFFDD1;
+	font-family: sans-serif;
+}
+p{
+	text-align: justify;
+}
+em{
+	background: RGBA(255,255,255,0.2);
+	padding: 0 5px 0 5px;
+	color: #111;
+}
+
+/* -------------------------class of pre-format--------------------------------- */
+pre{
+  background: #DBE7EA url(code.png) no-repeat scroll 5px 5px;
+  margin: 10px 5px;
+  padding:10px 10px 10px 35px;
+  color: #1A1A1A;
+  border: 1px solid #bbb;
+  width: 95%;
+  overflow: auto;
+  white-space: pre;
+  text-shadow:1px 1px 1px #FFF;
+  resize: both;
+  overflow: auto;
+}
+pre:hover{
+	background-color: #d6f1f9;
+	z-index:10;
+}
+pre em, pre b, pre strong{
+	outline:0.2em solid RGBA(255,0,0,0.2);
+	outline-offset:0.1em;
+}
+
+.shellcode {
+  background: #1A1A1A url(shell.gif) no-repeat scroll 5px 5px;
+  color: #00FF08;
+  text-shadow:1px 1px 1px #000,-1px -1px 1px #000;
+}
+.shellcode:hover {
+  background: #101010 url(shell.gif) no-repeat scroll 5px 5px;
+  color: #61FF00;
+}
+
+.php {
+  background: #F3F3F3 url(php.png) no-repeat scroll 5px 5px;
+  color: #1A1A1A;
+}
+.php:hover{ background-color: white }
+
+div#content{
+	width: 750px;
+	margin-top: -28em;
+	margin-left: -2em;
+	background: #fff;
+	padding: 50px;
+	min-width:600px;
+	max-width:99%;
+}
+a#fitorec{
+	background:#BFBFBF URL(meso_logo.gif) no-repeat;
+	width:122px;
+	height:122px;
+	display:block;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-o-border-radius: 0 0 10px 10px;
+	border-radius:61px;
+	z-index:10;
+	position:absolute;
+	border:5px solid #000;
+	-webkit-box-shadow: inset 0 1px 0 #7A7A7A;
+	-moz-box-shadow: inset 0 1px 0 #7A7A7A;
+	-ms-box-shadow: inset 0 1px 0 #7A7A7A;
+	-o-box-shadow: inset 0 1px 0 #7A7A7A;
+	box-shadow: inset 0 0 20px #111,0 0 5px #AAA;
+}
+a#fitorec:hover{
+	transform: rotate(375deg);
+	transition: 1s transform;
+}
+.repo__updated{
+	font-size: 0.8em;
+}
+#head{
+	background: #333 URL(../img/join.png);
+	width: 730px;
+	height: 200px;
+	margin: -30px 0 0 -30px;
+	background-position: right top;
+	border-bottom: 100px solid RGBA(0,200,190,0.6);
+	-webkit-box-shadow: 0 1px 0 RGBA(0,65,82,0.7),0 1px 10px #00CAFF;
+	   -moz-box-shadow: 0 1px 0 RGBA(0,65,82,0.7),0 1px 10px #00CAFF;
+	    -ms-box-shadow: 0 1px 0 RGBA(0,65,82,0.7),0 1px 10px #00CAFF;
+	     -o-box-shadow: 0 1px 0 RGBA(0,65,82,0.7),0 1px 10px #00CAFF;
+	        box-shadow: 0 1px 0 RGBA(0,65,82,0.7),0 1px 10px #00CAFF;
+}
+
+/*----------------------ESTILO FORMULARIOS--------------------*/
+#tablero h1 {
+		font-size: 22px;
+}
+
+#content {
+	background: #000;
+	color: #264796;
+}
+#pregunta-respuestas {
+	list-style: upper-alpha;
+	background: #A1A1A5;
+	border-radius:4px;
+}
+
+#pregunta-respuestas li {
+		font-size: 20px;
+		background: #FF3A00;
+		color: white;
+		text-shadow: none;
+		padding: 5px;
+		margin: 2px 0;
+		border-radius:5px;
+		 -moz-border-radius:5px;
+		 -webkit-border-radius:5px;
+}
+
+#pregunta-respuestas li#item-1{
+	background: #0061A5;
+	font-size: 15px;
+}
+#pregunta-respuestas li#item-2{
+	background: #FFAC39;
+	font-size: 15px;
+}
+#pregunta-respuestas li#item-3{
+	background: #8FC043;
+	font-size: 15px;
+}
+#pregunta-respuestas li#item-4{
+	background: #00BCEB;
+	font-size: 15px;
+}
+
+ol#pregunta-respuestas li:hover {
+	background: #A1A1A5 !important;
+	cursor: pointer;
+    cursor: hand;
+}
+#pregunta-respuestas li#item-1.activo,
+#pregunta-respuestas li#item-2.activo,
+#pregunta-respuestas li#item-3.activo,
+ol#pregunta-respuestas li.activo {
+	background: #4D4D4D;
+	color: #BFBFBF;
+}
+
+#img{
+	width: 20%;
+}
+
+#card-tam{
+	background: #F0F0F3;
+	margin-top: 10.5em;
+	margin-left: 30.5em;
+	width: 51%;
+	height: 68%;
+}  

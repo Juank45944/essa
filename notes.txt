@@ -1,0 +1,7 @@
+Añadir Curso nuevo modificar:
+-inicio.js : ingresarACurso()
+-lib.php : getProgress()
+-main_admin.js : asignarCursoUsuario()
+
+
+

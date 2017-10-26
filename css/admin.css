@@ -1,0 +1,24 @@
+body{
+    background-color: #264796;
+}
+
+img.logo{
+    width: 20%;
+}
+.card-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.card.white{
+    margin-top: 40%;
+}
+
+.btn-flat{
+  padding: 0;
+  margin-left: 1em;
+}
+
+button, .card-title.azul-text{
+    font-family: swis;
+}

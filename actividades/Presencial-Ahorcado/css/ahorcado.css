@@ -1,0 +1,105 @@
+body{
+    max-width: 1088px;
+    background: url('../img/MarcoColores-01.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1088px;   
+}
+
+.box {
+    background: #F0F0F3;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 2px 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px 30px;
+    text-align: left;
+    margin-top: 3em;
+    width: 100%;
+}
+
+.box-icon span {
+    color: #fff;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.info > p {
+    color: #717171;
+    font-size: 16px;
+    padding-top: 10px;
+    text-align: justify;
+}
+.info > a {
+    background-color: #03a9f4;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+.info > a:hover {
+    background-color: #0288d1;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+.btn-tam{
+    width: 50px;
+    height: 40px;
+}
+
+#titulo{
+    color: #A1A1A5;
+    font-size: 1.5em;	
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 1px 1px #7A7A7E;
+    transform:scaleX(1.1);
+}
+
+.palabras{
+    color: #5C5C5E;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #F7F7F7; 
+    font-size: 28px;
+    transform:scaleX(1.1);    
+    margin-right: 4em;
+}
+
+#card-letras{
+    margin-top: 6em;
+    margin-left: 2em;
+    background: #E6E6E9;
+}
+
+#letras{
+    margin-top: 8em;
+    margin-left: -2.5em;
+}
+
+.img-persona{
+    width: 10em;
+    margin-top: 8em;
+    margin-left: 7em;
+}
+ 
+.nube{
+    margin-left: 8em;
+}
+
+.img-ahorcado{
+    width: 50%;
+    margin-top: 3em;
+    margin-left: 1em;
+}
+
+#card-tam{
+    margin-top: -14em;
+    margin-left: 1em;
+    width: 30em;
+}
+
+#card-time{
+    margin-top: -40em;
+    margin-left: -10em;
+    width: 50%;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crucigrama</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->    
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/crucigrama.css">
+
+</head>
+
+<body id="body-crucigrama">
+	
+    <div id="debugger"></div>
+      <div id="container">
+        <table id="table1" cellspacing="0">
+          <tr>
+            <td rowspan="2" >
+              <div id="crossword"></div>
+            </td>
+            <td>
+              <table id="clues">
+                <tr>
+                  <td id="td-style">Across</td>
+                </tr>
+                <tr>
+                  <td>
+                  <ul id="across"></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-style">Down</td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul id="down"></ul>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td id="espacio-td" valign="top">
+            <div id="tries">Tienes 3 intentos</div>
+            <button id="checkBtn" class="btn" onclick="countTries()">VALIDAR RESPUESTAS</button>
+            <button id="showBtn" class="btn" disabled onclick="showAnswers()">MOSTRAR RESPUESTAS</button>
+            <button id="resetBtn" class="btn" onclick="reset()">REINICIAR</button>
+            </td>
+          </tr>
+        </table>
+    </div>
+          
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> 
+    <script src="js/crucigrama.js"></script>
+
+</body>
+</html>	
